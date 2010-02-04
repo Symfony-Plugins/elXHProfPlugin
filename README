@@ -1,0 +1,44 @@
+elXHProf plugin
+==============
+
+The `elXHProfPlugin` is a plugin to ease the use of [XHProf profiler](http://mirror.facebook.net/facebook/xhprof/ ).
+
+It allows developers to easily profile code blocks thanks to a simple API.
+
+This plugin also integrates XHProf runs into the web debug toolbar to see and compare them in a simple way.
+
+This work was originaly realized for [PMSIpilot](http://www.pmsipilot.com/).
+
+Prerequisite
+------------
+  * graphviz to have the graphs working (not mandatory)
+  * XHProf PHP extension installed : [very good XHProf presentation and installation guide](http://techportal.ibuildings.com/2009/12/01/profiling-with-xhprof/)
+
+Installation
+------------
+
+ * Install the plugin
+
+         $ symfony plugin:install elXHProfPlugin
+
+ * Deploy web dir by copying elXHProfPlugin/web content into sf_web_dir/elXHProfPlugin or executing the following command
+
+         $ symfony plugin:publish-assets
+
+How to profile
+--------------
+    $run = new XHProfRun('namespace');
+    // Code to profile
+    $run->end()
+    
+The namespace allows you to group multiple runs.
+
+How to view/compare the results
+--------------
+The links to the runs results are available in the web debut toolbar. They are grouped by namespace and a distinguished by whether the runs have been done in the current PHP process or in previous processes.
+
+You can compare 2 runs by checking them and clicking on the `Compare` button.
+
+TODO
+----
+  * Ability to delete runs from debug toolbar

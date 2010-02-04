@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.4.6" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>elXHProfPlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>Integration of XHProf profiler</summary>
+ <description>Integration of XHProf profiler (simple API to profile + web debug toolbar integration)</description>
+ <lead>
+  <name>Eric Lemoine</name>
+  <user>Eric.Lemoine</user>
+  <email>ratibus@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-02-03</date>
+ <time>12:00:00</time>
+ <version>
+  <release>1.0.0</release>
+  <api>1.0.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.symfony-project.org/license">MIT license</license>
+ <notes>-</notes>
+ <contents>
+  <dir name="/">
+   <file role="data" name="README" />
+   <file role="data" name="LICENSE" />
+   <dir name="config">
+    <file role="data" name="config.php" />
+   </dir>
+   <dir name="lib">
+    <dir name="vendor">
+     <dir name="facebook">
+      <dir name="xhprof">
+       <dir name="display">
+        <file role="data" name="typeahead_common.php" />
+        <file role="data" name="xhprof.php" />
+       </dir>
+       <dir name="utils">
+        <file role="data" name="callgraph_utils.php" />
+        <file role="data" name="xhprof_lib.php" />
+        <file role="data" name="xhprof_runs.php" />
+       </dir>
+      </dir>
+     </dir>
+    </dir>
+    <file role="data" name="elWebDebugPanelXHProf.class.php" />
+    <file role="data" name="XHProfRun.class.php" />
+    <file role="data" name="XHProfRunPool.class.php" />
+   </dir>
+   <dir name="web">
+    <dir name="css">
+     <file role="data" name="xhprof.css" />
+    </dir>
+    <dir name="docs">
+     <file role="data" name="index.html" />
+     <file role="data" name="sample-callgraph-image.jpg" />
+     <file role="data" name="sample-diff-report-flat-view.jpg" />
+     <file role="data" name="sample-diff-report-parent-child-view.jpg" />
+     <file role="data" name="sample-flat-view.jpg" />
+     <file role="data" name="sample-parent-child-view.jpg" />
+    </dir>
+    <dir name="jquery">
+     <file role="data" name="indicator.gif" />
+     <file role="data" name="jquery.autocomplete.css" />
+     <file role="data" name="jquery.autocomplete.js" />
+     <file role="data" name="jquery.tooltip.css" />
+     <file role="data" name="jquery.tooltip.js" />
+     <file role="data" name="jquery-1.2.6.js" />
+    </dir>
+    <dir name="js">
+     <file role="data" name="xhprof_report.js" />
+    </dir>
+    <file role="data" name="callgraph.php" />
+    <file role="data" name="index.php" />
+    <file role="data" name="typeahead.php" />
+   </dir>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.2.0</min>
+    <max>1.5.0</max>
+    <exclude>1.5.0</exclude>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+ 
+  <release>
+    <version>
+      <release>1.0.0</release>
+      <api>1.0.0</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <license uri="http://www.symfony-project.org/license">MIT license</license>
+    <date>2010-02-03</date>
+    <license>MIT</license>
+    <notes>
+      * initial release
+    </notes>
+  </release>
+  
+</changelog>
+</package>
