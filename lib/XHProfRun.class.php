@@ -132,6 +132,7 @@ class XHProfRun
    */
   public function getUrl()
   {
+    sfContext::getInstance()->getConfiguration()->loadHelpers('Asset');
     return sprintf('%s?run=%s&source=%s', _compute_public_path('index.php', 'elXHProfPlugin', 'php'),$this->getId(), $this->getNamespace());
   }
   

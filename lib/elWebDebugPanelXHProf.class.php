@@ -62,6 +62,7 @@ class elWebDebugPanelXHProf extends sfWebDebugPanel
       $html .= '</div>';
     }
     
+    sfContext::getInstance()->getConfiguration()->loadHelpers('Asset');
     $baseUrl = _compute_public_path('index.php', 'elXHProfPlugin', 'php');
     $html .=<<<EOF
 <script type="text/javascript">
